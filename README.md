@@ -2,10 +2,9 @@
 
 The notebook presents a Convolutional Neural Network (CNN) classifier that detects pneumonia on x-ray images. It also contains a visualization of representations learned by the network using **activation maps** technique. And finally, it features a visual explanation of the classifier results with **Grad-CAM** (Gradient-weighted Class Activation Mapping). Refer to the **[Overview](#Overview-of-Data,-Training,-Model-Results)** section for model performance summary. 
 
-<center>
-<img src="grad-cam.png" height=50% width=50%>
-</center>
-<br>
+<p align=center>
+<img src="grad-cam.png" height=70% width=70%>
+</p>
 
 ### Why Detect Pneumonia?
 
@@ -18,36 +17,36 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7345724/)
 ### Summary
 The CNN is a **VGG model** pre-trained on ImageNet dataset and **fine-tuned** on [NIH Chest X-ray dataset](https://www.nih.gov/news-events/news-releases/nih-clinical-center-provides-one-largest-publicly-available-chest-x-ray-datasets-scientific-community) found on [Kaggle](https://www.kaggle.com/nih-chest-xrays/data). Since the NIH dataset is severely imbalanced (only 1% of all images are classified as pneumonia positive), the **oversampling** of positive class and **undersampling** of negative class were performed prior to training. The final model architecture consists of a VGG architecture, global pooling, fully connected and dropout layers. Adam optimizer was used to improve the binary accuracy, and the final model artifacts were chosen with regard to the best validation loss. 
 
-#### Table of Content:
-* [Why Detect Pneumonia?](#Why-Detect-Pneumonia?)
-* [**Overview of Data, Training, Model Results**](#Overview-of-Data,-Training,-Model-Results)
-* [Load the dataset](#Load-the-dataset)
-* [Original Class Distribution](#Original-Class-Distribution)
-* [Data Resampling](#Data-Resampling)
-    - [Training Set](#Training-Set)
-    - [Validation and Test Set](#Validation-and-Test-Set)
-* [Data Augmentation and Normalization](#Data-Augmentation-and-Normalization)
-* [Modelling & Training](#Modelling-&-Training)
-* [Visualization of Learned Patterns](#Visualization-of-Learned-Patterns)
-* [Visualization of Intermediate Activation Maps](#Visualization-of-Intermediate-Activation-Maps)
-* [Training Performance](#Training-Performance)
-* [Metrics Analysis](#Metrics-Analysis)
-    - [Precision and Recall](#Precision-and-Recall)
-    - [ROC/AUC](#ROC/AUC)
-    - [F1-Score](#F1-Score)
-    - [Confusion Matrix](#Confusion-Matrix)
-    - [Final Classification Report](#Final-Classification-Report)
-* [Visual Interpretation of Model Predictions](#Visual-Interpretation-of-Model-Predictions)
-* [Acknowledgements](#Acknowledgements)
+**Table of Content:**
+* Why Detect Pneumonia?
+* **Overview of Data, Training, Model Results**](#Overview-of-Data,-Training,-Model-Results)
+* Load the dataset
+* Original Class Distribution
+* Data Resampling
+    - Training Set
+    - Validation and Test Set
+* Data Augmentation and Normalization
+* Modelling & Training
+* Visualization of Learned Patterns
+* Visualization of Intermediate Activation Maps
+* Training Performance
+* Metrics Analysis
+    - Precision and Recall
+    - ROC/AUC
+    - F1-Score
+    - Confusion Matrix
+    - Final Classification Report
+* Visual Interpretation of Model Predictions
+* Acknowledgements
 
 
 ### Overview of Data, Training, Model Results
 
 ```
 Dataset                    :  NIH Chest X-ray Dataset
-Training set               :  3720 (oversampled) positive  & 3720 (undersampled) negative images 
-Validation set             :  250 positive & 1002 (undersampled) negative images
-Test set                   :  251 positive & 1002 (undersampled) negative images
+Training set               :  3720 (oversampled) positive  & 3720 (undersampled) negative images (50/50 ratio)
+Validation set             :  250 positive & 1002 (undersampled) negative images (20/80 ratio)
+Test set                   :  251 positive & 1002 (undersampled) negative images (20/80 ratio)
 Train/Val/Test Split       :  ~75/13/13
 
 Test F1-score              :  0.47
