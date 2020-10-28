@@ -19,7 +19,7 @@ The CNN is a **VGG model** pre-trained on ImageNet dataset and **fine-tuned** on
 
 **Table of Content:**
 * Why Detect Pneumonia?
-* **Overview of Data, Training, Model Results**](#Overview-of-Data,-Training,-Model-Results)
+* [**Overview of Data, Training, Model Results**](#Overview-of-Data,-Training,-Model-Results)
 * Load the dataset
 * Original Class Distribution
 * Data Resampling
