@@ -1,6 +1,6 @@
 ## Pneumonia Detection from Chest X-Ray Images
 
-The notebook presents a Convolutional Neural Network (CNN) classifier that detects pneumonia on x-ray images. It also contains a visualization of representations learned by the network using **activation maps** technique. And finally, it features a visual explanation of the classifier results with **Grad-CAM** (Gradient-weighted Class Activation Mapping). Refer to the **[Overview](#Overview-of-Data,-Training,-Model-Results)** section for model performance summary. 
+The notebook presents a Convolutional Neural Network (CNN) classifier that detects pneumonia on x-ray images. It also contains a visualization of representations learned by the network using **activation maps** technique. And finally, it features a visual explanation of the classifier results with **Grad-CAM** (Gradient-weighted Class Activation Mapping). Refer to the **[Overview](#-Overview-of-Data,-Training,-Model-Results)** section for model performance summary. 
 
 <p align=center>
 <img src="grad-cam.png" height=70% width=70%>
@@ -19,7 +19,7 @@ The CNN is a **VGG model** pre-trained on ImageNet dataset and **fine-tuned** on
 
 **Table of Content:**
 * Why Detect Pneumonia?
-* [**Overview of Data, Training, Model Results**](#Overview-of-Data,-Training,-Model-Results)
+* [**Overview of Data, Training, Model Results**](#-Overview-of-Data,-Training,-Model-Results)
 * Load the dataset
 * Original Class Distribution
 * Data Resampling
